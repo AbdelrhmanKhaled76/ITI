@@ -1,0 +1,16 @@
+Choose an idea of your console project :
+-----------------------------------------
+1] collect requirements needed (make sure it is SMART)
+2] choose model of SWE models to follow (prefer agile)
+3] try to use any tool to organize your work ex: HackNPlan
+4] make public GitHub repo 
+
+4] design Class Diagram for your system structure 
+5] select major actors and the main system functions and design Use case diagram 
+6] select 3 major actions and design it with activity diagram (3 activity diagram)
+7] self study : Sequence diagram (2 diagrams) 
+6] implement it using c++ OOP project with Friendly user interface 
+(console application )
+8] project and requirement and diagrams should all uploaded in GitHub repo 
+thanks 
+

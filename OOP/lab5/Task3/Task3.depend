@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1762781480 source:d:\interns\iti\oop\lab5\task3\main.cpp
+	<iostream>
+	<string>
+	<conio.h>
+	<windows.h>
+
+1762781480 >
+
+1762927825 source:/media/abdelrhman/My stuff/ITI/OOP/lab5/Task3/main.cpp
+	<iostream>
+	<string>
+	<unistd.h>
+	<termios.h>
+	<sys/ioctl.h>
+

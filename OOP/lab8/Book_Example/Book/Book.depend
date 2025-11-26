@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1763378932 source:/media/abdelrhman/My_Stuff/Interns/ITI/OOP/lab8/Book_Example/Book/main.cpp
+	<iostream>
+	<vector>
+	<string>
+

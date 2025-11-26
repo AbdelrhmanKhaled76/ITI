@@ -1,0 +1,35 @@
+body {
+  background-color: pink;
+}
+
+/* Home Page */
+
+#home-layout {
+  text-align: center;
+}
+
+/* Main page  */
+
+#header-section {
+  text-align: center;
+}
+
+#header-section #top {
+  text-decoration: underline;
+}
+
+#different-font{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#content-header {
+  text-decoration: underline;
+}
+
+#different-color {
+    color: red;
+}
+
+#next {
+    text-align: right;
+}

@@ -1,0 +1,5 @@
+Assignment Day 10:
+1-create template class--for  final stack Example  .(contains all types of ctr and operators )
+   create main method that demonstrate how to create different objects of stack handling different types (int, float, char, complex type)
+2-create Generic (template standalone  function ) that sum different types int float double complex
+3-Inheritace :Create Base ,Derived Example to test concept of Inheritance in Lecture.

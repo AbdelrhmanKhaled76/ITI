@@ -1,0 +1,5 @@
+1. Write a program that prints your name, age, and city using std::cout.
+2. Write a program that reads two numbers and displays their sum, difference, and average
+3. Write a program that takes a decimal number and displays its hexadecimal and octal values.
+4. Write a program that reads a character and displays its ASCII.
+-------------------------------------------------------------------------------------------------

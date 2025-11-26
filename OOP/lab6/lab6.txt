@@ -1,0 +1,58 @@
+1)=> Stack:
+------------
+1. Implement a Stack class using raw pointers.
+2. Add methods to demonstrate method chaining.
+3. Implement a function showElements() to display the contents of the stack.
+4. Create the following constructors:
+-Default constructor
+-Parameterized constructor
+5. Create a destructor to properly delete dynamically allocated memory (raw pointer).
+6. Add a static counter to track the number of Stack objects created.
+7. Create a static method to display this counter.
+---------------------------------------------------------------------
+
+2)=> Complex Class:
+-------------------
+1. Create a Complex class to represent complex numbers.
+2. Add data members: real, image
+3. Add a counter to track how many objects are created.
+4. Implement the following constructors:
+Default constructor
+Overloaded constructor: Complex(float), Complex(float, float) 
+5. Implement a destructor that decrements the counter.
+6. Add a method showCounter() to display the number of active objects.
+7. Add a method printComplex() to display the number in a readable format, showing different cases
+- 5+7i
+- -3-3i
+- -8i
+- 8i
+- 8i
+- -9i
+- -9+3i
+- 8+i
+8. Print which constructor or destructor is being called at runtime.
+---------------------------------------------------------------------
+
+3)=> Design a BankAccount Class:
+--------------------------------
+
+Simulate a simple banking system using classes.
+1. Design a BankAccount class with the following data members:
+- accountHolder (name)
+- accountNumber (auto-generated (incremented) using nextID)
+- balance
+- counter (to count total accounts created)
+2. Implement constructors:
+Default constructor
+Parameterized constructor
+3. Implement methods:
+deposit → increases balance and returns a reference to the object (to support chaining).
+withdraw → decreases balance.
+showAccount() → displays all account information.
+getBalance() → returns the current balance.
+showCounter() → to display how many accounts were created.
+
+
+
+
+

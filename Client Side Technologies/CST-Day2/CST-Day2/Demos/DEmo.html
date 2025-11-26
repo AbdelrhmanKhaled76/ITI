@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* (0,1,2)012 */
+      body div.c1 {
+        background-color: aqua;
+      }
+      div {
+        background-color: antiquewhite;
+      }
+      div {
+        /* 001 */
+        border: solid rgb(64, 243, 64) 5px;
+        border-radius: 78px;
+        width: 150px;
+        height: 150px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: red !important;
+        outline: blue dotted 2px;
+      }
+      p {
+        color: blueviolet;
+        /* border-color: blue;
+              border-width: 3px;
+              border-style: dashed;
+
+              border-top: 4px yellow solid;
+              border-top-color: aliceblue;
+              border-top-width: 50px;
+              border-top-style: double;
+
+              border: 5px red solid; */
+        width: 550px;
+        padding-top: 5px;
+        padding-right: 15px;
+        padding-bottom: 25px;
+        padding-left: 35px;
+        padding: 5px 15px 25px 35px; /*t r b l*/
+        padding: 5px 15px 25px; /*t rl b */
+        padding: 5px 15px; /*tb rl  */
+        padding: 10px; /*tbrl  */
+        margin-left: auto;
+        margin-right: auto;
+
+        border: dotted 10px green;
+      }
+      p a {
+        /*decendent*/
+        color: inherit;
+        font-weight: bold;
+      }
+      p > b {
+        /*direct child*/
+        color: green;
+      }
+      /*h1+h2 = adjacent sibling*/
+      h1 ~ h2 {
+        /*general sibling*/
+        text-align: center;
+        text-decoration: underline;
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <iframe src="menu.html" width="500" height="500"
+      >this client doesnt support iframe element</iframe
+    >
+
+    <iframe src="page1.html" width="350" height="500" name="myframe"></iframe>
+    <h2>heading#2</h2>
+    <h1>heading#1</h1>
+    <span>ay 7aga</span>
+    <h2>heading#2</h2>
+    <h2>heading#2</h2>
+    <div class="c1"></div>
+    <p>
+      <b>bold statement</b>
+      <span>simple <b>span</b> element</span>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati iste
+      recusandae placeat ullam! At in nisi dolorum nostrum perferendis quo
+      officia quaerat vero, optio explicabo maxime ducimus error omnis delectus?
+      Commodi dolorum quo quam voluptatem aspernatur illo quibusdam ipsam
+      voluptatum fugiat in voluptas atque ipsum repellat pariatur debitis
+      adipisci, nemo repellendus sed quos nam quas! Quidem error iste cum
+      doloribus. Fugiat nam quia labore fuga provident, earum eius nemo
+      repudiandae, dolorem neque nostrum. Recusandae odit distinctio eaque
+      asperiores ipsum omnis laudantium fugit pariatur, voluptate soluta
+      provident magni voluptas expedita facere.
+      <a id="a1id" href="http://www.google.com">google</a>
+    </p>
+    <p>
+      <b>bold statement</b>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati iste
+      recusandae placeat ullam! At in nisi dolorum nostrum perferendis quo
+      officia quaerat vero, optio explicabo maxime ducimus error omnis delectus?
+      Commodi dolorum quo quam voluptatem aspernatur illo quibusdam ipsam
+      voluptatum fugiat in voluptas atque ipsum repellat pariatur debitis
+      adipisci, nemo repellendus sed quos nam quas! Quidem error iste cum
+      doloribus. Fugiat nam quia labore fuga provident, earum eius nemo
+      repudiandae, dolorem neque nostrum. Recusandae odit distinctio eaque
+      asperiores ipsum omnis laudantium fugit pariatur, voluptate soluta
+      provident magni voluptas expedita facere.
+      <a id="a2id" href="http://www.google.com">google</a>
+    </p>
+    <p>
+      <b>bold statement</b>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati iste
+      recusandae placeat ullam! At in nisi dolorum nostrum perferendis quo
+      officia quaerat vero, optio explicabo maxime ducimus error omnis delectus?
+      Commodi dolorum quo quam voluptatem aspernatur illo quibusdam ipsam
+      voluptatum fugiat in voluptas atque ipsum repellat pariatur debitis
+      adipisci, nemo repellendus sed quos nam quas! Quidem error iste cum
+      doloribus. Fugiat nam quia labore fuga provident, earum eius nemo
+      repudiandae, dolorem neque nostrum. Recusandae odit distinctio eaque
+      asperiores ipsum omnis laudantium fugit pariatur, voluptate soluta
+      provident magni voluptas expedita facere.
+      <a id="a3id" href="http://www.google.com">google</a>
+    </p>
+    <span>simple statement</span>
+    <a href="#">page1</a>
+    <h2>heading#2</h2>
+  </body>
+</html>

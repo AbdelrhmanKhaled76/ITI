@@ -1,0 +1,57 @@
+--> user
+- email
+- name
+- password
+- age
+
+--> customer => inherits from user
+- booking()
+- cancellation() (before the film start within 5 mins) // cancelled for now
+
+--> Admin => inherits from user
+- addMovie()
+- removeMovie()
+- listUsers()
+
+--> Movie
+- description
+- title
+- Id
+- category
+- duration
+- vectorOfShowTime[showTime]
+- isFull
+
+
+--> showTime
+- Date
+- numberOfSeats
+- seats[availability : boolean]
+--> Category
+Comedy
+Action
+Drama
+
+
+------ flow -----
+
+register -->  User => admin / customer
+
+login --> admin / customer
+
+// leave it as object now 
+
+Customer ----------------------------------------
+
+	>> show movies <<
+	>> logout <<
+
+show movies
+
+ movie ------------------------------------------
+ 	title :
+ 	category : 
+ 	desc : 
+ 	duration :
+ 	
+

@@ -1,0 +1,14 @@
+Software lifecycle
+------------------
+
+1- Listing business requirements (functional and nonfunctional) -> in an understandable manner
+
+2- Translate the problem into diagrams -> ERD , ClassDiagram,UseCase, flowchart, UI Screens
+
+3- Implementation -> code file source files based technology
+
+4- Testing -> unit testing , QA team
+
+5- Deployment -> publishing 
+
+6- Maintenance -> versioning(update)

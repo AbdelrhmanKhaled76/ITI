@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1762931105 source:/media/abdelrhman/My stuff/ITI/OOP/lab5/Task5/main.cpp
+	<iostream>
+	<unistd.h>
+	<termios.h>
+	<sys/ioctl.h>
+	<cstring>
+

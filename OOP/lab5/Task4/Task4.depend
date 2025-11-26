@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1762886645 source:/media/abdelrhman/My stuff/ITI/OOP/lab5/Task4/main.cpp
+	<iostream>
+	<string>
+	<array>
+	<termios.h>
+	<unistd.h>
+	<cstdlib>
+	<limits>
+	<memory>
+

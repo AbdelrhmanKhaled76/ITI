@@ -1,0 +1,74 @@
+body {
+  background-color: #f0f8ff;
+}
+h1 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+#main-table table {
+  width: 100%;
+  border: none;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+#main-table table td {
+  border: none;
+  padding: 4px 10px;
+}
+
+#main-table {
+  border-collapse: collapse;
+  margin: 20px auto;
+  width: 400px;
+}
+
+#main-table td,
+#main-table tr {
+  padding: 8px;
+}
+
+#main-table td {
+  border: 3px solid #ccc;
+}
+
+label {
+  font-weight: bold;
+}
+
+div {
+  margin: 5px 0;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 5px;
+}
+
+input,
+select,
+textarea {
+  width: 95%;
+}
+
+textarea {
+  text-align: left;
+  resize: none;
+}
+.interests {
+  display: block;
+  font-size: 15pt;
+  text-align: center;
+  text-decoration: underline;
+}
+
+#main-table input[type="submit"],
+#main-table input[type="reset"] {
+  width: auto;
+  padding: 5px 10px;
+  margin: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
