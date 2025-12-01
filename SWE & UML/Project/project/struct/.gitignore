@@ -1,0 +1,33 @@
+<<<<<<< HEAD
+.idea
+.vscode
+.vs
+out/
+=======
+# CLion / JetBrains
+.idea/
+cmake-build-*/
+
+# VS Code
+.vscode/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+
+# Build outputs
+*.o
+*.obj
+*.exe
+*.out
+*.dll
+*.so
+*.a
+app.exe
+
+# Other
+shelf/
+workspace.xml
+>>>>>>> af18ee2519fb187a9363c371f8759d72c67ef01c
