@@ -105,7 +105,6 @@ class BST {
                     Node* tempRight = foundNode->right;
                     foundNode = foundNode->right;
                 }
-                    
             }
             else {
                 cout << "Node not found !" << endl;
