@@ -1,0 +1,35 @@
+1) Sole Proprietorship
+
+A sole proprietorship is a business owned and operated by one person. It requires only one individual to set it up. The owner has unlimited liability, meaning personal assets can be used to pay business debts.
+Advantages: Simple to start, full control for the owner, low cost.
+Disadvantages: High personal financial risk, limited ability to raise capital, business ends if the owner leaves.
+Examples: Small shops, freelancers, barbers, tutors.
+
+2) General Partnership
+
+A general partnership is formed when two or more people run a business together and share profits and responsibilities. It requires at least two partners. All partners have unlimited liability, sharing responsibility for debts.
+Advantages: Easy to establish, more capital available, shared workload.
+Disadvantages: Full personal liability for each partner, risk of partner conflicts, shared profits.
+Examples: Small restaurants with multiple owners, joint retail stores, group-owned services.
+
+3) Limited Partnership
+
+A limited partnership includes two types of partners: general partners who manage the business and have unlimited liability, and limited partners who only invest and have liability limited to their contribution.
+It requires at least two people: one general partner and one limited partner.
+Advantages: Ability to attract investors who don’t want management roles, limited partners have low risk.
+Disadvantages: General partners carry all the liability, limited partners cannot participate in management.
+Examples: Real estate investment businesses, some family-owned ventures.
+
+4) Limited Liability Company (LLC / Private Limited Company)
+
+An LLC is a legally separate entity from its owners (called members). It can be set up by one to many members depending on local law (commonly up to 50). Members have limited liability, meaning they only risk the amount they invested.
+Advantages: Protects personal assets, flexible management, suitable for small and medium businesses.
+Disadvantages: Cannot publicly trade shares, ownership transfer may be restricted, some legal formalities needed.
+Examples: Most startups, family businesses, small manufacturing companies.
+
+5) Joint-Stock Company (Public Company)
+
+A joint-stock company has capital divided into shares owned by shareholders. It generally requires at least three shareholders. Shareholders have limited liability and are only responsible for the value of their shares.
+Advantages: Able to raise large amounts of capital, shares can be publicly traded, stable long-term structure.
+Disadvantages: Complex and expensive to form, heavy regulation, more paperwork and audits.
+Examples: Telecom companies, banks, large industrial or tech corporations.
