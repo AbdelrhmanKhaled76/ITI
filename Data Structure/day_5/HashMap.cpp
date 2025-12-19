@@ -75,6 +75,8 @@ public:
 
     bool Remove(const KeyType& X)
     {
+        if (!Contains(X)) return false;
+
         int WhichList = MyHashFunction(X);
 
         auto& bucket = theLists[WhichList];
