@@ -16,7 +16,10 @@ class Graph
     bool marks[50];
 
 public:
-    explicit Graph() {numVertices = 0;}
+    explicit Graph() {
+        MakeEmpty(); 
+        numVertices = 0;
+    }
 
     void MakeEmpty(){
         numVertices = 0;
