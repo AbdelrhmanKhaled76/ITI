@@ -1,70 +1,84 @@
-// let windowStop;
+//first part
 
+let childWin;
+let intervalId;
+let y = 0;
+let step = 10;
+let direction = 1;
+
+function openWindow() {
+  y = 0;
+  direction = 1;
+
+  childWin = window.open(
+    "child.html",
+    "",
+    "width=300,height=200,alwaysRaised=yes"
+  );
+
+  intervalId = setInterval(() => {
+    if (!childWin || childWin.closed) {
+      stopMoving();
+      return;
+    }
+
+    const maxY = screen.availHeight - 200;
+    y += step * direction;
+
+    if (y <= 0 || y >= maxY) {
+      direction *= -1;
+    }
+
+    y = Math.max(0, Math.min(y, maxY));
+
+    childWin.moveTo(300, y);
+    childWin.focus();
+  }, 50);
+}
+
+function closeWindow() {
+  clearInterval(intervalId);
+  intervalId = null;
+}
+
+
+//second part
+
+//first
+
+// let adWin;
 // function openWindow() {
-//     const wind = window.open(
-//         "child.html",
-//         "",
-//         "width=300,height=300"
-//     );
+//   adWin = window.open("child.html", "", "width=400,height=300");
 
-//     wind.focus();
+//   intervalId = setInterval(() => {
+//       clearInterval(intervalId);
 
-//     const step = 20;
 
-//     windowStop = setInterval(() => {
-//         if (wind.closed) {
-//             clearInterval(windowStop);
-//             return;
-//         }
-
-//         wind.moveBy(step, step);
-//     }, 500);
+//     adWin.scrollBy(0, 2);
+//     adWin.focus();
+//   }, 50);
 // }
 
 // function closeWindow() {
-//     if (windowStop) {
-//         clearInterval(windowStop);
-//     }
+//   clearInterval(intervalId);
 // }
 
+//second
 
-// second part
-let closeWindow;
+// let adWin;
+// let timeoutId;
 
 // function openWindow() {
-//     const wind = window.open(
-//         "child.html",
-//         "",
-//         "width=300,height=300"
-//     );
-//     closeWindow = setInterval(function(){
-//         wind.scrollBy(
-//             0,
-//             2
-//         );
-//         wind.focus();
-//     },50);
+//   adWin = window.open("child.html", "", "width=400,height=300");
+//   scrollAd();
 // }
 
-let adWin;
-let timeoutId;
-let stop = false;
+// function scrollAd() {
+//   adWin.scrollBy(0, 2);
+//   adWin.focus()
+//   timeoutId = setTimeout(scrollAd, 50);
+// }
 
-function openWindow() {
-  stop = false;
-  adWin = window.open("child.html", "", "width=400,height=300");
-  scrollAd();
-}
-
-function scrollAd() {
-  if (stop || !adWin || adWin.closed) return;
-
-  adWin.scrollBy(0, 2);
-
-  timeoutId = setTimeout(scrollAd, 50);
-}
-
-function stopScroll() {
-  stop = true;
-  clearTimeout(timeoutId);
-}
+// function closeWindow() {
+//   clearTimeout(timeoutId);
+// }
