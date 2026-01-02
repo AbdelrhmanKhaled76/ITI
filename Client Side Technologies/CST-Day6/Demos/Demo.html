@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <form>
+      <input type="text" name="userName" />
+      <input type="text" name="userAge" />
+      <input type="submit" />
+    </form>
+    <h1 id="h1id" class="c1"><u>Document Demo</u> ahmed maher</h1>
+    <p class="c1">simple text</p>
+    <img
+      src="images/marshall_bw.jpg"
+      width="150"
+      onmouseover="changeImg(this)"
+      onmouseout="returnImg(this)"
+    />
+    <img
+      src="images/marshall_bw.jpg"
+      width="150"
+      onmouseover="changeImg(this)"
+      onmouseout="returnImg(this)"
+    />
+    <img
+      src="images/marshall_bw.jpg"
+      width="150"
+      onmouseover="changeImg(this)"
+      onmouseout="returnImg(this)"
+    />
+    <img
+      src="images/marshall_bw.jpg"
+      width="150"
+      onmouseover="changeImg(this)"
+      onmouseout="returnImg(this)"
+    />
+
+    <script>
+      //   document.getElementById("h1id").id = "abc";
+      //   function fun(){}
+
+      function changeImg(myImg) {
+        myImg.src = "images/marshall_c.jpg";
+      }
+
+      function returnImg(myImg) {
+        myImg.src = "images/marshall_bw.jpg";
+      }
+
+      document.getElementById("h1id").onclick = function () {
+        alert("click event");
+      };
+    </script>
+  </body>
+</html>
