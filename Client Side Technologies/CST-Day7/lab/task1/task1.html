@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+    <style>
+        body {
+            height: 100vh;
+        }
+        form {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        fieldset {
+            width: 300px;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+            color: #2c3e50;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form">
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone">
+            <br><br>
+            <button type="submit">submit</button>
+        </fieldset>
+    </form>
+    <script src="task1.js"></script>
+</body>
+</html>

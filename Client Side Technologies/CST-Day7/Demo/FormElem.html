@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      onload = function () {
+        // document.getElementById("aElem").onclick = function () {
+        //   alert();
+        //   return false;
+        //   //
+        //   // location.assign(this.href)
+        // };
+
+        document.getElementById("diplayBtn").value = "ay 7aga";
+        //   document.getElementById("displayBtn").onclick=function () {
+        // console.log(this)
+        //     var sel = document.getElementById("menu");
+        //     console.log(sel.selectedIndex);
+        //     console.log(sel.options[sel.selectedIndex].text);
+        //     console.log(sel.options[sel.selectedIndex].value);
+        //     //multiple selection (TASK)
+        //   }
+        // displayNum()
+        var eraseVal = function () {}; //TASK
+
+        var inputField = document.getElementById("txt1");
+
+        function displayNum(elem) {
+          var val = elem.value;
+          inputField.value += val.trim();
+        }
+
+        function displaOptions() {
+          var sel = document.getElementById("menu");
+          console.log(sel.selectedIndex);
+          console.log(sel.options[sel.selectedIndex].text);
+          console.log(sel.options[sel.selectedIndex].value);
+          //multiple selection (TASK)
+        }
+        function displayContent(txtField) {
+          var txt = txtField.value;
+          document.getElementById("div1id").innerHTML = txt;
+        }
+      };
+
+      //   function getLink(linkVal){
+
+      //     location.assign(linkVal.href)
+
+      //   }
+    </script>
+  </head>
+  <body>
+    <a href="javascript:void(0)" id="aElem" onclick="alert('anchor tag'); "
+      >google</a
+    >
+    <input type="button" value="  1  " onclick="displayNum(this)" />
+    <input type="button" value="  2  " onclick="displayNum(this)" />
+    <input type="button" value="  3  " onclick="displayNum(this)" />
+    <input type="button" value="  4  " onclick="displayNum(this)" />
+    <input type="button" value="  5  " onclick="displayNum(this)" />
+    <input type="button" value="  6  " onclick="displayNum(this)" />
+    <input type="button" value="  7  " onclick="displayNum(this)" />
+    <input type="text" id="txt1" />
+    <input type="button" value=" C  " />
+    <input type="button" value=" << " onclick="eraseVal()" />
+    <br />
+    <select id="menu" multiple size="3">
+      <option>option#1</option>
+      <option>option#2</option>
+      <option>option#3</option>
+      <option value="o4">option#4</option>
+      <option>option#5</option>
+      <option>option#6</option>
+      <option>option#7</option>
+      <option>option#8</option>
+      <option>option#9</option>
+    </select>
+    <input type="button" value="displayOptions" id="diplayBtn" />
+    <input
+      type="text"
+      onfocus="select()"
+      onblur="console.log('blur event')"
+      onchange="displayContent(this)"
+    />
+    <div id="div1id"></div>
+  </body>
+</html>

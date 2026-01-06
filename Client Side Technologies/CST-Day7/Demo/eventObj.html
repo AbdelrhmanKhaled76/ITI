@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        margin-left: 15px;
+        width: 200px;
+        height: 200px;
+        border: solid red 5px;
+      }
+      #btn1 {
+        margin: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="h1id">hiiii</h1>
+    <div id="div1">
+      <input type="button" value="clickme" id="btn1" />
+    </div>
+    <script>
+      var obj = document.getElementById("h1id");
+      //programatically custom event
+      var myEvent = new Event("lookup");
+      // var myEvent= new Event("click");
+
+      //obj listen to event
+      obj.addEventListener("lookup", function () {
+        console.log("look up event");
+        console.log(event.type);
+      });
+      // obj.addEventListener("click",function(){})
+
+      //firing event
+      setTimeout(function () {
+        obj.dispatchEvent(myEvent);
+      }, 5000);
+
+      document
+        .getElementById("btn1")
+        .addEventListener("mouseover", function () {});
+      var hdlr = function () {
+        console.log(this);
+        console.log(event.type);
+        // document.getElementById("btn1").removeEventListener("click", hdlr);
+      };
+
+      document.getElementById("btn1").addEventListener("click", hdlr);
+
+      document.getElementById("btn1").addEventListener("click", function () {
+        console.log("button");
+        event.stopImmediatePropagation();
+      });
+      document.getElementById("btn1").addEventListener("click", function () {
+        console.log("ay 7aga");
+      });
+      document.getElementById("div1").addEventListener(
+        "click",
+        function () {
+          console.log(this);
+          console.log(event.type);
+          console.log("div");
+          event.stopPropagation();
+        },
+        true
+      );
+
+      //   document.getElementById("btn1").onclick = function () {
+      //     // console.log(this);
+      //     // console.log(event);
+      //     console.log(this.value);
+      //     console.log(event.target);
+      //     console.log(event.eventPhase);
+      //   };
+      function clickEv() {
+        console.log("body");
+
+        console.log(event.target);
+        console.log(event.eventPhase);
+        console.log(event.BUBBLING_PHASE); //3
+        console.log(event.AT_TARGET); //2
+        console.log(event.CAPTURING_PHASE); //1
+        console.log(event.NONE); //0
+      }
+      //   document.getElementsByTagName("div")[0].onclick = function () {
+      //     console.log("div element");
+      //     console.log(event.target);
+      //     console.log(event.eventPhase); //bubbling phase
+      //     console.log(event.composedPath());
+      //   };
+    </script>
+  </body>
+</html>
