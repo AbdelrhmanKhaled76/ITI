@@ -1,0 +1,28 @@
+Progressive web app => downloading a website so it benefits from both being a website and an application at the same time
+
+what is better websites or applications and why ?
+
+- depending on the usage , if daily you will prefer an application rather than website
+- applications could have some storage issues 
+- applications are more suitable the device you have not like the website (made for general usage)
+- applications may have offline features and could reach some information for more comfy usage
+- performance and ui ux is more suitable in application
+- cost of application is enormous in compare with website and the time consuming in higher too
+
+which one should i install ? 
+
+- depending on business
+- most people just prefer to use just three application daily 
+
+-> application could be rejected from the third part libraries like google play
+-> so that's why we should study the case pretty well before even making an application 
+
+what is missing from website 
+
+-> performance 
+-> accessability
+-> not safe 
+
+at least one feature must be implemented using PWA for a stable version
+
+

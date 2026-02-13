@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="syntax Error" onclick="console.log(y" />
+    <input type="button" value="reference Error" onclick="console.log(y)" />
+    <input type="button" value="type Error" onclick="console.logg('hii')" />
+    <input
+      type="button"
+      value="Range Error"
+      onclick="console.logg((10).toFixed(105))"
+    />
+    <script>
+      onerror = function () {
+        ////
+        console.log(arguments[0]);
+        return false;
+      };
+      try {
+        console.log("abc");
+        //  throw "error ";
+        setTimeout(function () {
+          //   try {
+          console.logg("settime inside try"); //type error
+          //   } catch (err) {}
+        }, 1000);
+        console.log("after error");
+      } catch (err) {
+        console.log("catch block");
+        // console.loggg(err);
+        console.log("catch block s2");
+      }
+      console.log("after try..catch");
+
+      //   var x = 10; //
+      //   x = new Date(); //
+      //   x = new SyntaxError("new error object"); //
+      //   throw "error occured"; ///////
+
+      //   function adding(a, b) {
+      //     if (
+      //       !(typeof arguments[0] == "number" && typeof arguments[1] == "string")
+      //     )
+      //       throw new Error();
+      //     if (arguments.length !== 2) throw new Error("invalid number of params");
+
+      //     return a + b;
+      //   }
+      //   adding(1, "abc");
+    </script>
+  </body>
+</html>

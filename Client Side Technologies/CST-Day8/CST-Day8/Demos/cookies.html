@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="txt1" />
+    <input type="button" value="save info" id="btn1" />
+    <input type="button" value="delete info" id="btn2" />
+    <div></div>
+    <script>
+      document.getElementById("btn1").addEventListener("click", function () {
+        var val = document.getElementById("txt1").value;
+        var today = new Date();
+        today.setMonth(today.getMonth() + 1);
+
+        //create cookie
+        //persistent cookie
+        document.cookie = "userName=" + val + ";expires=" + today;
+
+        //session
+        document.cookie = "usrAge=10";
+
+        document.cookie = "userAddr=123 st.;expires=" + today;
+
+        //display
+        //access--< create obj. with key value pairs of cookie
+
+        //update
+
+        //delete
+      });
+
+      document.getElementById("btn2").addEventListener("click", function () {
+        var today = new Date();
+        var val = document.getElementById("txt1").value;
+        document.cookie =
+          "userName=" +
+          val +
+          ";expires=" +
+          today.setMonth(today.getMonth() - 2);
+      });
+    </script>
+  </body>
+</html>
