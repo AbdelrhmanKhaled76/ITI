@@ -1,0 +1,2 @@
+we try different combination for this equation to work using two nested loops
+like if i pow 2 + j && i + j pow 2  sum ++

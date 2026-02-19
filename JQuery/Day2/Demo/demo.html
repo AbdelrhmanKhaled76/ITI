@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+    <!-- <script src="script/jquery-ui.js"> </script> -->
+     <!-- <script defer src="script.js"></script> -->
+    <style>
+        #dv1{
+            border: 1px solid red;
+            width: 100px;
+        }
+        .c1{
+            width: 150px;
+        }
+        .c2{
+            color:red;
+            background-color: black;
+            font-size: 40px;
+            
+        }
+
+        div{
+            border: 1px solid blue;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Hello</h2>
+    <span>any data</span>
+    <h1>Welcome</h1><br>
+    <h3>Test</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, corrupti. Delectus voluptas, laudantium, nulla eaque itaque voluptatibus dignissimos adipisci enim voluptate natus quasi asperiores assumenda necessitatibus praesentium modi, totam quaerat?</p>
+    <h1>New Msg..</h1>
+    <h2>msg</h2>
+    <div id="dv1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur qui a cumque! Non at, adipisci, natus vitae eaque deleniti quaerat repudiandae culpa ratione sed reprehenderit, fuga quos numquam temporibus deserunt?</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, corrupti. Delectus voluptas, laudantium, nulla eaque itaque voluptatibus dignissimos adipisci enim voluptate natus quasi asperiores assumenda necessitatibus praesentium modi, totam quaerat?</p>
+    
+    <ul>
+        <li>item#1</li>
+        <li>item#2</li>
+        <li>item#3</li>
+        <li>item#4</li>
+        <li>item#5</li>
+    </ul>
+    <input type="button" value="show" id="showBtn">
+    <input type="button" value="hide" id="hideBtn">
+    <input type="button" value="Fade To" id="fadeToBtn">
+    <img src="images/dd.png">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, corrupti. Delectus voluptas, laudantium, nulla eaque itaque voluptatibus dignissimos adipisci enim voluptate natus quasi asperiores assumenda necessitatibus praesentium modi, totam quaerat?</p>
+
+    <h2>test........</h2>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias adipisci accusantium magni tempore illo, saepe accusamus autem eligendi quaerat aperiam nostrum praesentium animi excepturi dolorem ab iste, tempora reiciendis.</div>
+    <input type="text">
+    <input type="button" value="click" id="btn">
+    <input type="button" value="remove" id="btn2">
+    <div class="c1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias adipisci accusantium magni tempore illo, saepe accusamus autem eligendi quaerat aperiam nostrum praesentium animi excepturi dolorem ab iste, tempora reiciendis.</div>
+    <script>
+        $(document).ready(function(){
+            // console.log($('h1').eq(0))
+            // console.log($('h1')[0])
+            // $('h1').eq(0).css('color','red')
+            // // $('h1')[0].css('color','aqua')//error
+            // console.log($('h1').get(0))//native html element
+            // $('h1').css('backgroundColor','black')
+            // $('ul li:eq(2)').css('color','yellow').text('updated')
+            // $('ul li:first').css('color','yellow').text('updated')
+            // $('input[type="text"]').css({
+            //     "color":'white',
+            //     "background-color":'red'
+            // })
+            // // $('ul li:eq(2),ul li:eq(3)')
+            // $('ul li').filter(':eq(2),:eq(3)').html('test')
+            // $('div').filter(function(){
+            //     // console.log(this)//native element
+            //     // $(this)//jquery object
+            //     var w = $(this).width()
+            //     return w>50&&w<200
+            // }).css('backgroundColor','yellow')
+
+            // +,~
+            // console.log($('h1').next('h3,h2').css('color','pink'))//+
+            // $('h1').siblings('h2').css('color','pink')
+            // $('h1').nextAll('h2').css('color','pink')//~
+            $('#dv1').css('color','red')
+
+            $('#btn').click(function(){
+                // $('h2').addClass('c2')
+                // $('h2')[2].toggleClass('c2')//error
+                // $('h2')[2].classList.toggle('c2')
+                $('h2').eq(2).toggleClass('c2')
+            })
+            $('#btn2').click(function(){
+                // $('h2').removeClass('c2')
+                console.log($('img').attr('src'))
+            })
+
+            // $('ul li').html(function(idx,elem){
+            //     console.log(this)
+            //     console.log(elem)
+            //     return idx
+            // })
+            // $('ul li').each(function(idx,elem){
+            //     console.log(elem)
+            //     console.log(this)
+            //     console.log(idx)
+            //     $(this).text(idx)
+            //     // $(elem)
+            // })
+
+            // $('#showBtn').click(function(){
+            //     $('ul').prepend($('li:last'))
+            //     $('img').fadeIn(1000)
+            //     // $('img').show('bounce',1000)
+            //     // $('img').show('slide',1000)
+            // })
+            // $('#hideBtn').click(function(){
+            //     $('img').fadeOut(1000)
+            //     // $('img').hide('clip',1000)
+            //     // $('img').hide('explode',1000)
+            //     //Fast,Normal,Slow
+            // })
+
+            // $('#fadeToBtn').click(function(){
+            //     $('img').fadeTo(1000,0.5)
+            // })
+
+            //DOM manipulation
+            // $('body').append($('<img>'))
+            // $('<img>').appendTo($('body'))
+            // console.log($('<img>'))
+            // $('<img>').prependTo($('body'))
+            var elem = $('<img>')
+            $('body').prepend(elem)
+            $('img').eq(0).attr('src','images/opacity.jpg')
+            // console.log($('img').eq(1).attr('src'))
+
+            // $('<span>text span......</span>').insertAfter($('li:first'))
+            // $('p').wrap($('<div>'))
+            //     $('p').wrapAll($('<div>'))
+            // $('p').wrapInner($('<b>'))
+
+            // $('img').one('click',function(){
+            //     alert('hi')
+            // })
+
+            // $('img').one('click',function(){
+            //     alert('test')
+            // })
+
+            // $('img').click(function(){
+            //     alert('hi')
+            // })
+            // $('img').click(function(){
+            //     alert('test')
+            // })
+
+            // $('img').off('click')
+
+
+            // $('ul').on('click','li:first',{username:'ali'},fun)
+
+
+            $('h1').on('myevent',function(){
+                $(this).css('color','red').delay(1000).hide(1000)
+            })
+
+            // $('img').click(function(){
+            //     $('h1').trigger('myevent')
+            // })
+
+            var res = prompt('Enter your age')
+            if(res>10){
+                $('h1').trigger('myevent')
+            }
+        })
+    </script>
+</body>
+</html>

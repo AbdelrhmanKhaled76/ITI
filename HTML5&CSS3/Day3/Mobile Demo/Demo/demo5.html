@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Asimovian&family=Bebas+Neue&family=Bitcount+Ink:wght@100..900&family=Bungee+Spice&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Exile&family=Manufacturing+Consent&family=Noto+Sans+Wancho&family=Playwrite+IN+Guides&family=Playwrite+IN:wght@100..400&family=Rubik+Vinyl&family=Sevillana&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/021fabd03e.js" crossorigin="anonymous"></script>
+    <style>
+        img:hover{
+            /* opacity: 0.5; */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation-name: myAnim;
+            animation-duration: 5s;
+        }
+        @keyframes myAnim {
+            from{
+                opacity: 1;
+            }
+            to{ 
+                opacity: 0;
+            }
+        }
+        @keyframes myAnim2 {
+            from{left: 0px;}
+            to{left: 300px;}
+            
+        }
+        @keyframes myAnim3 {
+            0%{background-color: red;left: 0px;top: 0px;}
+            25%{background-color: yellow;left: 200px;top: 0px;}
+            50%{background-color: green;left: 200px;top: 200px;}
+            75%{background-color: blue;left: 0px;top: 200px;}
+            100%{background-color: red;left: 0px;top: 0px;}
+
+
+            
+        }
+        div{
+            /* border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            top: 0px;
+            background-color: red;
+            position: relative;
+            box-shadow: -5px -5px 10px 20px gray;
+            margin: auto; */
+            /* animation-name: myAnim3;
+            animation-duration: 5s;
+            animation-iteration-count: 4;
+            animation-direction: alternate;
+            animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+            animation-delay: 2s; */
+        }
+        h1{
+            /* color: white; */
+            color: black;
+            /* text-shadow: 5px 5px 10px black; */
+            /* font-family: 'myfont'; */
+            /* font-family:  "Playwrite IN"; */
+            font-family: "Bitcount Ink";
+            transform: scale(1,2) rotate(20deg);
+            text-align: center;
+        }
+        @font-face {
+            font-family: "myfont";
+            src: url('fonts/WOFF/3Dumb-webfont.woff') format('woff');
+        }
+
+
+        div{
+            padding: 5px;
+            margin: 20px;
+            color: red;
+            border: 1px solid blue;
+            box-shadow: 5px 5px 10px 10px yellow;
+            width: 300px;
+            transition-property: all;
+            transition-duration: 5s;
+            /* transition: all 5s; */
+            transition-delay: 2s;            
+        }
+        div:hover{
+             padding: 20px;
+            margin: 50px;
+            color: green;
+            border: 1px solid yellow;
+            box-shadow: 5px 5px 10px 10px orange;
+            width: 800px;
+            
+        }
+    </style>
+</head>
+<body>
+    <i class="fa-solid fa-headphones"></i>
+    <i class="fa-solid fa-camera"></i>
+    <img src="images/img.jpg">
+    <!-- <div></div> -->
+    <h1>Welcome</h1>
+    <div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, nulla veniam. Accusamus quam, exercitationem voluptatibus eligendi ad totam, excepturi rem distinctio non nulla possimus? Laboriosam fugiat quibusdam libero omnis quae?
+    </div>
+</body>
+</html>

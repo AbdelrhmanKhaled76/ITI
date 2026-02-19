@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/jq-D.js"></script>
+    <script src="script/jq-easing.js"></script>
+    <style>
+        img{
+            position: absolute;
+            width: 150px;
+            height: auto;
+        }
+        #img3{
+            /* top: 10px; */
+            /* left: 200px; */
+            top: 440px;
+        }
+        #img2{
+            top: 220px;
+        }
+        div{
+            width: 200px;
+            border: 1px solid red;
+            padding: 5px;
+            margin-left: 5px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <img src="images/dd.png" id="img1">
+    <img src="images/dd.png" id="img2">
+    <img src="images/dd.png" id="img3">
+     -->
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus rerum hic unde, eligendi enim suscipit ea in ad? Soluta molestias non adipisci recusandae nulla aperiam, repellat officiis porro quasi tenetur?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis quisquam quod aliquid, ea, inventore reiciendis nostrum eaque, dolorum labore quo in minima? Aliquid libero ea possimus unde enim atque sequi.
+    </div>
+    <script>
+        $(document).ready(function(){
+            // $('#img1').animate({left:"+=600px"},5000,'linear')
+            // $('#img2').animate({left:"+=600px"},5000,'swing')
+            // $('#img3').animate({left:"+=600px"},5000,'easeInElastic')
+            $('div').animate({
+                width:"600px",
+                height:"50px",
+                marginLeft:"40px",
+                opacity:0.5
+            },5000,'linear')
+        })
+    </script>
+    <!-- <script>
+        
+document.getElementsByTagName('img')[0].onclick = function(event){
+    console.log(event)
+} 
+    </script> -->
+</body>
+</html>

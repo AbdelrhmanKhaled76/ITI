@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            /* visibility: hidden; */
+            /* display: none; */
+        }
+        .c1{
+            display: inline;
+            width: 300px;
+        }
+        /* img{
+            position: absolute;
+        }
+        #img2{
+            left: 50px;
+            z-index: 1;
+        }
+        #img1{
+            z-index: 1;
+        } */
+
+        .c2{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            overflow: scroll;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Test</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet impedit debitis neque animi hic iure, voluptatem autem quas quod reprehenderit atque sunt aliquid, explicabo saepe nam voluptates odio eius accusantium.</p>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur cupiditate hic velit libero debitis numquam corporis reprehenderit assumenda deserunt magni commodi fuga dolorem voluptate harum eos sit at, quod repellendus?
+        <p class="c1">Hello World........</p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur cupiditate hic velit libero debitis numquam corporis reprehenderit assumenda deserunt magni commodi fuga dolorem voluptate harum eos sit at, quod repellendus?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur cupiditate hic velit libero debitis numquam corporis reprehenderit assumenda deserunt magni commodi fuga dolorem voluptate harum eos sit at, quod repellendus?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur cupiditate hic velit libero debitis numquam corporis reprehenderit assumenda deserunt magni commodi fuga dolorem voluptate harum eos sit at, quod repellendus?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur cupiditate hic velit libero debitis numquam corporis reprehenderit assumenda deserunt magni commodi fuga dolorem voluptate harum eos sit at, quod repellendus?
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis corrupti reprehenderit quaerat impedit quos eaque perspiciatis consequuntur ea sit, provident eligendi ipsa doloremque. Optio hic sapiente, neque debitis minus ducimus.</p>
+    <img src="images/2.gif" id="img1">    
+    <img src="images/1.gif" id="img2">
+
+    <div class="c2">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui corrupti, ipsum quia quod eligendi mollitia ex perspiciatis suscipit inventore unde, ut amet culpa in! Amet voluptates hic fugiat eius eaque?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus labore tenetur quasi. Consequuntur iste assumenda vel magni excepturi doloribus impedit. Autem laboriosam sequi reprehenderit dolorem illo ex excepturi dolore a?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo mollitia voluptates officia quas nihil distinctio placeat hic sapiente nisi, eos rem! Minus sit atque qui delectus recusandae beatae voluptatum vitae!
+    </div>
+    <script>
+        document.getElementById('img1').onclick = function(){
+            this.style.zIndex = 1
+            document.getElementById('img2').style.zIndex = 0
+        }
+        document.getElementById('img2').onclick = function(){
+            this.style.zIndex = 1
+            document.getElementById('img1').style.zIndex = 0
+        }
+    </script>
+</body>
+</html>

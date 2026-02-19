@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+         /* p{
+            display: inline;
+            width: 200px;
+            margin: 20px;
+    }
+    img{
+        position: absolute;
+
+    }
+
+    #img2{
+        left: 50px;
+        /* z-index: 2; */
+   /* }
+    #img1{
+        /* z-index: 3; */
+    /*}
+    .c1{
+        z-index: 3;
+    } */
+
+    div{
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+        overflow: scroll;
+    }
+    </style>
+   
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo quos atque laborum repellendus, in asperiores soluta iure nam cumque expedita nihil veniam 
+        <p>Hello world.....</p>veritatis architecto. Molestiae quas aliquam deserunt doloribus hic?
+    </div>
+    <img src="images/1.gif" id="img1" class="c1">
+    <img src="images/2.gif" id="img2">
+    <script>
+        // document.getElementById('img2').onclick = function(){
+        //     // this.style.zIndex =2
+        //     // document.getElementById('img1').style.zIndex = 1
+
+        // }
+
+        // document.getElementById('img1').onclick = function(){
+        //     // this.style.zIndex =2
+        //     // document.getElementById('img2').style.zIndex = 1
+
+        // }
+        var myImages = document.querySelectorAll('img')
+        myImages.forEach(elem=>{
+            elem.addEventListener('click',()=>{
+            myImages.forEach(img=>{
+                img.classList.remove('c1')
+            })
+            elem.classList.add('c1')
+            })
+            
+        })
+    </script>
+</body>
+</html>
