@@ -6,27 +6,30 @@ using namespace std;
 #define Abdelrhman76 ios_base::sync_with_stdio(0),cin.tie(0),cout.tie(0);
 
 void solution() {
-    vector<int> nums(4);
-    
-    for (int i = 0; i < 4; i++) {
-        cin >> nums[i];
+    int size,index = -1;
+    cin >> size;
+    int arr[size];
+    for(int i=0; i < size; i++){
+        cin >> arr[i];
     }
-    int winner1 = (nums[0] > nums[1]) ? nums[0] : nums[1];
-    int winner2 = (nums[2] > nums[3]) ? nums[2] : nums[3];
-    sort(nums.begin(), nums.end());
-    if ((winner1 == nums[2] && winner2 == nums[3]) || (winner2 == nums[2] && winner1 == nums[3]))
-        cout << "YES" << endl;
-    else
-        cout << "NO" << endl;
+    int pattern = arr[1] - arr[0];
+    for(int i = 0;i < size; i++){
+        if(i != size - 1 && arr[i+1] - arr[i] != pattern)
+        {
+            index = i+1;
+            break;
+        }
+    }
+    cout << index + 1 << endl;
 }
 
 int main()
 {
     Abdelrhman76
-    int t;
-    cin >> t;
-    while (t--) {
+    // int t;
+    // cin >> t;
+    // while (t--) {
         solution();
-    }
+    // }
     return 0;
 }
