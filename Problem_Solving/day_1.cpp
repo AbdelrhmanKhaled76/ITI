@@ -2,31 +2,48 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <bitset>
+#include <string>
 using namespace std;
 #define Abdelrhman76 ios_base::sync_with_stdio(0),cin.tie(0),cout.tie(0);
 
-void solution() {
-    vector<int> nums(4);
+// void solution() {
     
-    for (int i = 0; i < 4; i++) {
-        cin >> nums[i];
+// }
+
+class Solution {
+public:
+    int binaryGap(int n) {
+        string s = bitset<8>(n).to_string();
+        bool firstOne = false;
+        int counter = 0, lilCounter = 0;
+        for(int i =0; i < s.length(); i++){
+            if(s[i] == '1'){
+                if(firstOne){
+                    counter = max(counter ,++lilCounter);
+                    firstOne = false;
+                }
+                else{
+                    firstOne = true;
+                }
+            }
+            else if(firstOne) {
+                lilCounter++;
+            }
+        }
+        return counter;
     }
-    int winner1 = (nums[0] > nums[1]) ? nums[0] : nums[1];
-    int winner2 = (nums[2] > nums[3]) ? nums[2] : nums[3];
-    sort(nums.begin(), nums.end());
-    if ((winner1 == nums[2] && winner2 == nums[3]) || (winner2 == nums[2] && winner1 == nums[3]))
-        cout << "YES" << endl;
-    else
-        cout << "NO" << endl;
-}
+};
 
 int main()
 {
     Abdelrhman76
-    int t;
-    cin >> t;
-    while (t--) {
-        solution();
-    }
+    // int t;
+    // cin >> t;
+    // while (t--) {
+    //     solution();
+    // }
+    Solution sol;
+    cout << sol.binaryGap(5) << endl;
     return 0;
 }
