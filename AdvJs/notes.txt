@@ -1,0 +1,40 @@
+--> A first-class function (also called a first-class citizen) means that functions are treated like any other value in a programming language.
+
+-If a language supports first-class functions, you can:
+
+1 - Assign a function to a variable
+
+2 - Pass a function as an argument to another function
+
+3 - Return a function from another function
+
+4 - Store functions in data structures (like arrays or objects)
+
+--> Mutual recursion happens when two or more functions call each other recursively to solve a problem.
+
+--> Function borrowing:
+▻apply( this_obj, params_array)
+
+Allows you to call another function while overwriting its this value.
+
+The first parameter that apply() accepts is the object to be bound to
+this inside the function and the second is an array of parameters to be
+passed to the function being called.
+▻call(this_obj,p1, p2, p3,
+
+Same as apply() but accepts parameters one by one, as opposed to as
+one array.
+▻bind(obj)
+
+Allows you to call a function into another object.
+
+We can achieve function currying via bind
+
+
+--> In JavaScript (and functional programming in general), currying means:
+
+- Transforming a function that takes multiple arguments into a sequence of functions that each take one argument.
+
+const add5 = add(5);
+add5(10); // 15
+add5(3);  // 8
