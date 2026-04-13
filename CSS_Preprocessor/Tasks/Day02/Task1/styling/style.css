@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #334155;
+  padding: 20px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.03);
+  width: 100%;
+  max-width: 1000px;
+}
+.card h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.card p {
+  font-size: 1rem;
+  color: #64748b;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+.card .responsive-form {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 600px) {
+  .card .responsive-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .card .responsive-form {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.card .responsive-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.card .responsive-form label span {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #475569;
+}
+.card .responsive-form label input {
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1e293b;
+  transition: all 0.2s ease-in-out;
+  background-color: #f8fafc;
+}
+.card .responsive-form label input::-moz-placeholder {
+  color: #94a3b8;
+}
+.card .responsive-form label input::placeholder {
+  color: #94a3b8;
+}
+.card .responsive-form label input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+  background-color: #f8fafc;
+}
+.card .responsive-form .full-width {
+  width: 100%;
+  grid-column: 1/-1;
+}
+.card .responsive-form button {
+  padding: 0.875rem 2rem;
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.25);
+}
+.card .responsive-form button:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 8px rgba(59, 130, 246, 0.3);
+}
+.card .responsive-form button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+}/*# sourceMappingURL=style.css.map */

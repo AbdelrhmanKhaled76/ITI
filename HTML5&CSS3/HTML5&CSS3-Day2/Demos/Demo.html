@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    x
+    <br />
+    <math>
+      <mi>x</mi>
+      <mo>=</mo>
+      <munderover>
+        <mo>Σ</mo>
+        <mrow>
+          <mi>n</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mrow>
+          <mi>∞</mi>
+        </mrow>
+      </munderover>
+    </math>
+    <br />
+    <svg>
+      <rect
+        onclick="setAttribute('fill', 'blue')"
+        x="50"
+        y="50"
+        width="150"
+        height="150"
+        stroke="red"
+        fill="green"
+      ></rect>
+    </svg>
+    <input type="text" id="txt1" />
+    <button id="btn1">get location</button>
+    <!-- <script>
+        //polyfill
+      window.localStorage = {
+        setItem: function () {},
+        getItem: function () {},
+      };
+    </script> -->
+    <script>
+      if (window.jq) {
+        loadScript("jq.js"); //script loading function
+      }
+
+      localStorage.setItem("userName", document.getElementById("txt1").value);
+      localStorage.setItem("userAge", 10);
+      localStorage["userAddr"] = "123 st.";
+      localStorage.userDept = "SD";
+
+      //   if (window.sessionStorage) {
+      sessionStorage.setItem("counter", 20);
+      //   }
+      document.getElementById("btn1").addEventListener("click", function () {
+        sessionStorage.setItem(
+          "counter",
+          parseInt(sessionStorage.getItem("counter")) + 1,
+        );
+
+        // navigator.geolocation.getCurrentPosition(
+        //   function (pos) {
+        //     var lat = pos.coords.latitude;
+        //     var log = pos.coords.longitude;
+        //     console.log(pos.coords.latitude);
+        //     console.log(pos.coords.longitude);
+        //     //   location.assign("http://maps.google.com/maps?q=" + lat + ";" + log);
+        //   },
+        //   function (err) {
+        //     console.log(err.code);
+        //     console.log(err.message);
+        //   },
+        //   { timeout: 0 },
+        // );
+      });
+    </script>
+  </body>
+</html>

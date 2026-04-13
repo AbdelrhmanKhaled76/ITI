@@ -1,0 +1,143 @@
+1 - db.createCollection("faculty", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      required: ["facultyName", "address"],
+      properties: {
+        facultyName: { bsonType: "string" },
+        address: { bsonType: "string" }
+      }
+    }
+  }
+});
+
+db.faculty.insertMany([
+  { _id: 101, facultyName: "Computer Science", address: "Building A, North Campus" },
+  { _id: 102, facultyName: "Marine Engineering", address: "Building C, Dockside" }
+]);
+
+db.createCollection("course", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      required: ["courseName", "finalMark"],
+      properties: {
+        courseName: { bsonType: "string" },
+        finalMark: { bsonType: "int", minimum: 0, maximum: 100 }
+      }
+    }
+  }
+});
+
+db.course.insertMany([
+  { _id: "JS101", courseName: "JavaScript Basics", finalMark: 100 },
+  { _id: "DB202", courseName: "MongoDB Advanced", finalMark: 100 },
+  { _id: "SEA303", courseName: "Marine Navigation Systems", finalMark: 100 }
+]);
+
+db.createCollection("student", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      required: ["firstName", "lastName", "isFired", "facultyID", "results"],
+      properties: {
+        firstName: { bsonType: "string" },
+        lastName: { bsonType: "string" },
+        isFired: { bsonType: "bool" },
+        facultyID: { bsonType: "int" },
+        results: {
+          bsonType: "array",
+          items: {
+            bsonType: "object",
+            required: ["courseID", "grade"],
+            properties: {
+              courseID: { bsonType: "string" },
+              grade: { bsonType: "int", minimum: 0, maximum: 100 }
+            }
+          }
+        }
+      }
+    }
+  }
+});
+
+db.student.insertMany([
+  {
+    firstName: "Ahmed",
+    lastName: "Hassan",
+    isFired: false,
+    facultyID: 101,
+    results: [
+      { courseID: "JS101", grade: 85 },
+      { courseID: "DB202", grade: 92 }
+    ]
+  },
+  {
+    firstName: "Sara",
+    lastName: "Marine",
+    isFired: false,
+    facultyID: 102,
+    results: [
+      { courseID: "SEA303", grade: 78 }
+    ]
+  },
+  {
+    firstName: "John",
+    lastName: "Doe",
+    isFired: true,
+    facultyID: 101,
+    results: []
+  }
+]);
+
+
+
+
+2- db.student.aggregate([
+  {
+    $project: {
+      _id: 0,
+      fullName: { 
+        $concat: ["$firstName", " ", "$lastName"] 
+      },
+      averageGrade: { 
+        $avg: "$results.grade" 
+      }
+    }
+  }
+])
+
+3- db.course.aggregate([
+  {
+    $group: {
+      _id: null, 
+      totalFinalMarks: { $sum: "$finalMark" }
+    }
+  },
+  {
+    $project: { _id: 0 }
+  }
+])
+
+4- db.student.aggregate([
+  {
+    $match: { firstName: "Ahmed" }
+  },
+  {
+    $lookup: {
+      from: "course",          
+      localField: "courseIDs",  
+      foreignField: "_id",      
+      as: "enrolledCourses"    
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      fullName: { $concat: ["$firstName", " ", "$lastName"] },
+      "enrolledCourses.courseName": 1,
+      "enrolledCourses.finalMark": 1
+    }
+  }
+])
+

@@ -13,25 +13,8 @@ using namespace std;
 
 class Solution {
 public:
-    int binaryGap(int n) {
-        string s = bitset<8>(n).to_string();
-        bool firstOne = false;
-        int counter = 0, lilCounter = 0;
-        for(int i =0; i < s.length(); i++){
-            if(s[i] == '1'){
-                if(firstOne){
-                    counter = max(counter ,++lilCounter);
-                    firstOne = false;
-                }
-                else{
-                    firstOne = true;
-                }
-            }
-            else if(firstOne) {
-                lilCounter++;
-            }
-        }
-        return counter;
+    int removeDuplicates(vector<int>& nums) {
+        
     }
 };
 
@@ -44,6 +27,7 @@ int main()
     //     solution();
     // }
     Solution sol;
-    cout << sol.binaryGap(5) << endl;
+    vector <int> nums({1,1,2});
+    cout << sol.removeDuplicates(nums) << endl;
     return 0;
 }

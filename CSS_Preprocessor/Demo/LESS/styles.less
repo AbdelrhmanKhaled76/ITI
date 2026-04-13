@@ -1,0 +1,86 @@
+//? 1- easy less extension in vsc
+//? 2- npm i less -g --> lessc less:css
+//? 3- prepros - koala - composs 
+body{
+    background-color: red;
+}
+
+@color:red;
+.parent{
+    background-color: @color;
+    .child{
+        color: @color;
+    }
+    &:hover{
+        background-color: green;
+    }
+}
+
+.box(@font:10px,@color:red){
+    font-size: @font;
+    background-color: @color;
+}
+.box-elem{
+    .box(100px);
+    background-color:green;
+}
+
+#Theme(@flag:true){
+    body{
+        background-color: if(@flag,black,white);
+        color:if(@flag,white,black)
+    }
+}
+#Theme();
+
+// guard
+.size(@width) when (@width>500px) {
+    width: @width*2px ;
+}
+.size-elem{
+    .size(200)
+}
+
+#colors(){
+    primary:blue;
+    secondary:gray;
+}
+
+.btn{
+    background-color: #colors[primary];
+    color: #colors[secondary];
+}
+
+each(range(4),{
+    .col-@{value}{
+        width: (@value*100px);
+    }
+});
+
+@sizes:10,30,60;
+each(@sizes,{
+    .col-@{value}{
+        width: @value*1%;
+    }
+});
+
+.websites(){
+    facebook:blue;
+    whatsapp:green;
+}
+
+each(.websites(),.(@value,@key){
+    .@{key}-website{
+        background: @value;
+    }
+});
+
+.button{
+    width: 100px;
+    height: 100px;
+}
+
+.btn{
+    &:extend(.button);
+    width: 50px;
+}

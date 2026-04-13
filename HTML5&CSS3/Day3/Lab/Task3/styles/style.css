@@ -1,0 +1,21 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    font-size: 24px;
+    padding-inline: 100px;
+    padding-block: 10px;
+    border-radius: 16px;
+    border: blue 2px solid;
+    background-color: skyblue;
+    cursor: pointer;
+    transition: ease 0.5s all;
+}
+
+button:hover {
+    box-shadow: 0 0 20px blue;
+}

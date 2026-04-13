@@ -1,0 +1,22 @@
+{
+  "name": "lec2",
+  "version": "1.0.0",
+  "description": "node js day 2",
+  "main": " server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "shimaa",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.14.0",
+    "express": "^5.2.1",
+    "uuid": "^13.0.0",
+    "validator": "^13.15.26"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

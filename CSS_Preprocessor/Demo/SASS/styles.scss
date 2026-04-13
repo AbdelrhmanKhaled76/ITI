@@ -1,0 +1,221 @@
+//? 1- live sass compiler
+//? 2- npm i sass -g --> sass --watch scss:css
+//? 3- desktop app [koala - propros -compass]
+@import "./variables";
+//& sass --> old syntax [indentation]
+// body
+//   background:red;
+//& scss --> new syntax
+body {
+  background-color: red;
+}
+
+//? Comments
+//comment not converted to css
+/*comment will appear in css*/
+/*!comment will appear in css and minified css*/
+//? Nesting
+.parent {
+  background-color: aqua;
+  .child {
+    color: red;
+    .subchild {
+      background-color: green;
+    }
+  }
+}
+.child {
+  color: blue;
+}
+//? sass ampersand
+.container {
+  width: 80%;
+  margin: 0 auto;
+  &-fluid {
+    width: 100%;
+    &:hover {
+      color: red;
+    }
+  }
+  &:hover {
+    background-color: aqua;
+  }
+}
+//? variables
+$font: 20px;
+.elem1 {
+  font-size: $font;
+}
+.elem2 {
+  $font: 50px;
+  font-size: $font;
+}
+//$font:100px;
+.elem3 {
+  font-size: $font;
+  background-color: $primary;
+  color: $secondary;
+}
+//? Directives [@-rule]
+//^ @extend
+.boxv1 {
+  width: 100px;
+  height: 100px;
+  color: red;
+}
+.boxv2 {
+  color: green;
+  @extend .boxv1;
+  font-size: 20px;
+}
+//^ placeholder
+
+%box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.box {
+  background-color: yellow;
+  @extend %box;
+}
+
+//^ loops
+// interpolation #{$var}
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: $i/12 * 100%;
+  }
+}
+
+$i: 1;
+@while $i<= 12 {
+  .while-col-#{$i} {
+    width: $i/12 * 100%;
+  }
+  $i: $i + 1;
+}
+
+$colors: blue, red, green, white;
+@each $color in $colors {
+  .each-#{$color} {
+    background-color: $color;
+  }
+}
+
+$websites: (
+  "facebook": blue,
+  "github": black,
+  "whatsapp": green,
+);
+
+@each $key, $value in $websites {
+  .#{$key}-website {
+    background-color: $value;
+  }
+}
+
+//^ media queries
+@media (min-width: 500px) {
+  h1 {
+    background-color: aqua;
+  }
+  body {
+    color: red;
+  }
+}
+
+h1 {
+  @media (min-width: 500px) {
+    background-color: red;
+  }
+  @media (min-width: 700px) {
+    background-color: yellow;
+  }
+  @media (min-width: 900px) {
+    background-color: green;
+  }
+}
+
+body {
+  @media (min-width: 500px) {
+    background-color: red;
+  }
+  @media (min-width: 700px) {
+    background-color: yellow;
+  }
+  @media (min-width: 900px) {
+    background-color: green;
+  }
+}
+//^ mixins and functions
+@function Half($data) {
+  @return $data/2;
+}
+$size: 100px;
+.fun-elem {
+  width: $size;
+  height: Half($size);
+}
+
+@mixin block {
+  font-size: 100px;
+  width: 500px;
+  height: 500px;
+  background-color: red;
+}
+.mixin-elem {
+  background-color: green;
+  @include block();
+  color: yellow;
+}
+@mixin Square($size: 80px, $font: 20px, $color: blue) {
+  width: $size;
+  height: $size * 2;
+  font-size: $font;
+  background-color: $color;
+}
+.square {
+  @include Square();
+}
+
+@mixin Theme($is_dark: false) {
+  @if $is_dark {
+    body {
+      background-color: black;
+      color: white;
+    }
+  } @else {
+    body {
+      background-color: white;
+      color: black;
+    }
+  }
+}
+@include Theme(true);
+
+@mixin CreateCol($numOfCols:12,$screenName:"",$breakPoint:0px){
+  @if($screenName == ""){
+    @for $i from 1 through $numOfCols{
+      .col-#{$i}{
+        width: $i/$numOfCols*100%;
+      }
+    }
+  }@else{
+    @media (min-width:$breakPoint){
+       @for $i from 1 through $numOfCols{
+      .col-#{$screenName}-#{$i}{
+        width: $i/$numOfCols*100%;
+      }
+    }
+    }
+  }
+}
+
+@include CreateCol();
+@include CreateCol(12,"sm",576px);
+@include CreateCol(12,"md",786px);
+@include CreateCol(12,"lg",992px);
+@include CreateCol(12,"xl",1200px);
+@include CreateCol(12,"xxl",1400px);

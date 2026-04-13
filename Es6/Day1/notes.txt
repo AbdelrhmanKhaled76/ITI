@@ -1,0 +1,16 @@
+the difference between declaration function and an arrow function (this context) : 
+
+declaration function => creates it's own this and it depends on where do you call it not where it was created 
+
+setTimeOut(obj.method, 1000) this returns undefined because you just pass the logic to setTimeOut so it doesn't get the obj instance inside of it
+
+arrow functions => uses lexical scoping which means it searches for the function it is inside to inherit it's this from it 
+
+obj {
+	method : ()=> {
+	console.log(this);	
+}
+}
+
+this returns undefined because this cares only about where it was created not where it is called so when it searches for lexical scoping it didn't find any parent function
+fot it to inherit the this context from 

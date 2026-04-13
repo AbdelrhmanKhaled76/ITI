@@ -1,0 +1,29 @@
+@use "sass:math";
+.math-elem{
+    width: math.div(200px,400px)*100%;
+}
+$m-5:200px;
+$danger:pink;
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+@each $key,$value in $pinks{
+    .btn-#{$key}{
+        background-color: $value;
+    }
+    .bg-#{$key}{
+        background-color: $value;
+    }
+    .text-#{$key}{
+        color: $value;
+    }
+}
+
+//? hyphen naming convention
+body{
+    background-color: aqua;
+}
+//? BEM "Block Element Modifier"
+.container__child--red{
+    background-color: red;
+}

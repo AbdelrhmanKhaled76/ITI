@@ -1,0 +1,33 @@
+@grid-columns: 12;
+
+.generate-columns(@prefix, @i: 1) when (@i =< @grid-columns) {
+  .col-@{prefix}-@{i} {
+    width: percentage((@i / @grid-columns));
+    padding: 10px;
+    float: left;
+  }
+
+  .generate-columns(@prefix, (@i + 1));
+}
+
+.generate-columns(xs);
+
+@media (min-width: 576px) {
+  .generate-columns(sm);
+}
+
+@media (min-width: 768px) {
+  .generate-columns(md);
+}
+
+@media (min-width: 992px) {
+  .generate-columns(lg);
+}
+
+@media (min-width: 1200px) {
+  .generate-columns(xl);
+}
+
+@media (min-width: 1400px) {
+  .generate-columns(xxl);
+}

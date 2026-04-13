@@ -1,0 +1,60 @@
+body {
+  background-color: red;
+}
+.parent {
+  background-color: red;
+}
+.parent .child {
+  color: red;
+}
+.parent:hover {
+  background-color: green;
+}
+.box-elem {
+  font-size: 100px;
+  background-color: red;
+  background-color: green;
+}
+body {
+  background-color: black;
+  color: white;
+}
+.btn {
+  background-color: blue;
+  color: gray;
+}
+.col-1 {
+  width: 100px;
+}
+.col-2 {
+  width: 200px;
+}
+.col-3 {
+  width: 300px;
+}
+.col-4 {
+  width: 400px;
+}
+.col-10 {
+  width: 10%;
+}
+.col-30 {
+  width: 30%;
+}
+.col-60 {
+  width: 60%;
+}
+.facebook-website {
+  background: blue;
+}
+.whatsapp-website {
+  background: green;
+}
+.button,
+.btn {
+  width: 100px;
+  height: 100px;
+}
+.btn {
+  width: 50px;
+}

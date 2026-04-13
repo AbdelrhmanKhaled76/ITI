@@ -80,6 +80,11 @@ switch(command){
                 i++;
             }
         }
+        if(!updates.name && !updates.price){
+            updates.name = params[1];
+            updateProduct(id, updates.name);
+            return;
+        }
         updateProduct(id, updates.name, updates.price);
         break;
     case "delete":
