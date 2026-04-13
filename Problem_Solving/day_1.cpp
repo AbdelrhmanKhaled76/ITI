@@ -14,7 +14,22 @@ using namespace std;
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
-        
+        bool isTwice = false;
+        int tracker = nums.size() - 1;
+        if(nums.size() == 0) return 0;
+        for (int i = 1; i < nums.size(); i++)
+        {
+            if(nums[i] == nums[i-1] && isTwice){
+                swap(nums[i--], nums[tracker--]);
+            }
+            else if(nums[i] == nums[i-1]){
+                isTwice = true;
+            }
+            else {
+                isTwice = false;
+            }
+        }
+        return tracker+1;
     }
 };
 
@@ -27,7 +42,7 @@ int main()
     //     solution();
     // }
     Solution sol;
-    vector <int> nums({1,1,2});
+    vector <int> nums({1,1,1,2,2,3});
     cout << sol.removeDuplicates(nums) << endl;
     return 0;
 }
