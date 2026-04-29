@@ -1,0 +1,19 @@
+:root {
+  --main-color: #FFE97D;
+  /* Using as soft background fill */
+  --secondary-color: #FFEF9F;
+  --teritary-color: #E13F7C;
+  --filler-color: #FF537B;
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --text-primary: #111;
+  /* Standard dark gray */
+  --text-secondary: #888;
+  /* Standard medium gray */
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
