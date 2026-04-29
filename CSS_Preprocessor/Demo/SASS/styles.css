@@ -1,0 +1,497 @@
+body {
+  background-color: red;
+}
+
+/*comment will appear in css*/
+/*!comment will appear in css and minified css*/
+.parent {
+  background-color: aqua;
+}
+.parent .child {
+  color: red;
+}
+.parent .child .subchild {
+  background-color: green;
+}
+
+.child {
+  color: blue;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.container-fluid {
+  width: 100%;
+}
+.container-fluid:hover {
+  color: red;
+}
+.container:hover {
+  background-color: aqua;
+}
+
+.elem1 {
+  font-size: 20px;
+}
+
+.elem2 {
+  font-size: 50px;
+}
+
+.elem3 {
+  font-size: 20px;
+  background-color: rgb(255, 136, 0);
+  color: gray;
+}
+
+.boxv1, .boxv2 {
+  width: 100px;
+  height: 100px;
+  color: red;
+}
+
+.boxv2 {
+  color: green;
+  font-size: 20px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.box {
+  background-color: yellow;
+}
+
+.col-1 {
+  width: 8.3333333333%;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.while-col-1 {
+  width: 8.3333333333%;
+}
+
+.while-col-2 {
+  width: 16.6666666667%;
+}
+
+.while-col-3 {
+  width: 25%;
+}
+
+.while-col-4 {
+  width: 33.3333333333%;
+}
+
+.while-col-5 {
+  width: 41.6666666667%;
+}
+
+.while-col-6 {
+  width: 50%;
+}
+
+.while-col-7 {
+  width: 58.3333333333%;
+}
+
+.while-col-8 {
+  width: 66.6666666667%;
+}
+
+.while-col-9 {
+  width: 75%;
+}
+
+.while-col-10 {
+  width: 83.3333333333%;
+}
+
+.while-col-11 {
+  width: 91.6666666667%;
+}
+
+.while-col-12 {
+  width: 100%;
+}
+
+.each-blue {
+  background-color: blue;
+}
+
+.each-red {
+  background-color: red;
+}
+
+.each-green {
+  background-color: green;
+}
+
+.each-white {
+  background-color: white;
+}
+
+.facebook-website {
+  background-color: blue;
+}
+
+.github-website {
+  background-color: black;
+}
+
+.whatsapp-website {
+  background-color: green;
+}
+
+@media (min-width: 500px) {
+  h1 {
+    background-color: aqua;
+  }
+  body {
+    color: red;
+  }
+}
+@media (min-width: 500px) {
+  h1 {
+    background-color: red;
+  }
+}
+@media (min-width: 700px) {
+  h1 {
+    background-color: yellow;
+  }
+}
+@media (min-width: 900px) {
+  h1 {
+    background-color: green;
+  }
+}
+
+@media (min-width: 500px) {
+  body {
+    background-color: red;
+  }
+}
+@media (min-width: 700px) {
+  body {
+    background-color: yellow;
+  }
+}
+@media (min-width: 900px) {
+  body {
+    background-color: green;
+  }
+}
+
+.fun-elem {
+  width: 100px;
+  height: 50px;
+}
+
+.mixin-elem {
+  background-color: green;
+  font-size: 100px;
+  width: 500px;
+  height: 500px;
+  background-color: red;
+  color: yellow;
+}
+
+.square {
+  width: 80px;
+  height: 160px;
+  font-size: 20px;
+  background-color: blue;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.col-1 {
+  width: 8.3333333333%;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .col-sm-1 {
+    width: 8.3333333333%;
+  }
+  .col-sm-2 {
+    width: 16.6666666667%;
+  }
+  .col-sm-3 {
+    width: 25%;
+  }
+  .col-sm-4 {
+    width: 33.3333333333%;
+  }
+  .col-sm-5 {
+    width: 41.6666666667%;
+  }
+  .col-sm-6 {
+    width: 50%;
+  }
+  .col-sm-7 {
+    width: 58.3333333333%;
+  }
+  .col-sm-8 {
+    width: 66.6666666667%;
+  }
+  .col-sm-9 {
+    width: 75%;
+  }
+  .col-sm-10 {
+    width: 83.3333333333%;
+  }
+  .col-sm-11 {
+    width: 91.6666666667%;
+  }
+  .col-sm-12 {
+    width: 100%;
+  }
+}
+@media (min-width: 786px) {
+  .col-md-1 {
+    width: 8.3333333333%;
+  }
+  .col-md-2 {
+    width: 16.6666666667%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-4 {
+    width: 33.3333333333%;
+  }
+  .col-md-5 {
+    width: 41.6666666667%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-7 {
+    width: 58.3333333333%;
+  }
+  .col-md-8 {
+    width: 66.6666666667%;
+  }
+  .col-md-9 {
+    width: 75%;
+  }
+  .col-md-10 {
+    width: 83.3333333333%;
+  }
+  .col-md-11 {
+    width: 91.6666666667%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .col-lg-1 {
+    width: 8.3333333333%;
+  }
+  .col-lg-2 {
+    width: 16.6666666667%;
+  }
+  .col-lg-3 {
+    width: 25%;
+  }
+  .col-lg-4 {
+    width: 33.3333333333%;
+  }
+  .col-lg-5 {
+    width: 41.6666666667%;
+  }
+  .col-lg-6 {
+    width: 50%;
+  }
+  .col-lg-7 {
+    width: 58.3333333333%;
+  }
+  .col-lg-8 {
+    width: 66.6666666667%;
+  }
+  .col-lg-9 {
+    width: 75%;
+  }
+  .col-lg-10 {
+    width: 83.3333333333%;
+  }
+  .col-lg-11 {
+    width: 91.6666666667%;
+  }
+  .col-lg-12 {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .col-xl-1 {
+    width: 8.3333333333%;
+  }
+  .col-xl-2 {
+    width: 16.6666666667%;
+  }
+  .col-xl-3 {
+    width: 25%;
+  }
+  .col-xl-4 {
+    width: 33.3333333333%;
+  }
+  .col-xl-5 {
+    width: 41.6666666667%;
+  }
+  .col-xl-6 {
+    width: 50%;
+  }
+  .col-xl-7 {
+    width: 58.3333333333%;
+  }
+  .col-xl-8 {
+    width: 66.6666666667%;
+  }
+  .col-xl-9 {
+    width: 75%;
+  }
+  .col-xl-10 {
+    width: 83.3333333333%;
+  }
+  .col-xl-11 {
+    width: 91.6666666667%;
+  }
+  .col-xl-12 {
+    width: 100%;
+  }
+}
+@media (min-width: 1400px) {
+  .col-xxl-1 {
+    width: 8.3333333333%;
+  }
+  .col-xxl-2 {
+    width: 16.6666666667%;
+  }
+  .col-xxl-3 {
+    width: 25%;
+  }
+  .col-xxl-4 {
+    width: 33.3333333333%;
+  }
+  .col-xxl-5 {
+    width: 41.6666666667%;
+  }
+  .col-xxl-6 {
+    width: 50%;
+  }
+  .col-xxl-7 {
+    width: 58.3333333333%;
+  }
+  .col-xxl-8 {
+    width: 66.6666666667%;
+  }
+  .col-xxl-9 {
+    width: 75%;
+  }
+  .col-xxl-10 {
+    width: 83.3333333333%;
+  }
+  .col-xxl-11 {
+    width: 91.6666666667%;
+  }
+  .col-xxl-12 {
+    width: 100%;
+  }
+}/*# sourceMappingURL=styles.css.map */

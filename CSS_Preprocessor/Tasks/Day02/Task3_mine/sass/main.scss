@@ -1,0 +1,87 @@
+@use "./abstracts/variables" as *;
+@use "./layout/grid";
+@use "./abstracts/mixins" as *;
+@use "./base/typography";
+
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    padding-block: 64px;
+    background-color: $background-color;
+    display: flex; 
+    flex-direction: column;
+    gap: 48px;
+    align-items: start;
+}
+
+.navigation-bar {
+    width: 100%; 
+    @include flex-center-column();
+    justify-content: space-between;
+
+    .shape {
+        width: 100px;
+        height: 100px;
+        background-color: $heavy-color;
+    }
+
+    .nav-links {
+        @include flex-center-column();
+        justify-content: space-between;
+        gap: 12px;
+        list-style: none;
+
+        @media (max-width: 992px) {
+            width: 100%;
+            flex-direction: row;
+            justify-content: center; 
+        }
+    }
+
+    .circled-link {
+        width: 100px;
+        height: 100px;
+        background-color: $heavy-color;
+        border-radius: 50%; // Use 50% for circles
+        @include flex-center();
+
+        a {
+            text-decoration: none;
+            color: $primary-color;
+        }
+    }
+}
+
+// 3. Sections
+.second-section {
+    .card {
+        display: flex; // Added so align-items works
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        img {
+            @include circle-shape;
+        }
+    }
+}
+
+.triangle {
+    width: 100px;
+    height: 100px;
+    background-color: $primary-color;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+.gallery-section img {
+    height: 100px;
+    object-fit: cover;
+}
+#main-video {
+    width: 100%;
+    height: 200px;
+}

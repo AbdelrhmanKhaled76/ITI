@@ -1,0 +1,8 @@
+the main difference between using local , session, cookies for storage : 
+
+Feature			,Local Storage,				Session Storage,		Cookies
+Storage Limit,		~5–10 MB,				~5 MB,				~4 KB
+Persistence		,Permanent (until manually deleted)	,Until the tab is closed	,Depends on set expiry date
+Sent to Server,		No					,No				,Yes (with every HTTP request)
+Scope			,Same origin (all tabs/windows)	 	,Current tab only		,Domain & Path specific
+Security		,Vulnerable to XSS			,Vulnerable to XSS	 	,"Better (can use HttpOnly, Secure)"

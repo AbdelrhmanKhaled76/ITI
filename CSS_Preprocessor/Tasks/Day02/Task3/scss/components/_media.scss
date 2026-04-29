@@ -1,0 +1,33 @@
+.media-section {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.media-video {
+  flex: 1.5;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-width: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  
+  @include mobile {
+    min-width: 100%;
+  }
+}
+
+.media-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  
+  @include mobile {
+    width: 100%;
+  }
+}

@@ -1,0 +1,35 @@
+.main .main-title {
+  color: red;
+}
+.main .main-subtitle {
+  color: rgb(250, 108, 108);
+}
+.main .main-btn {
+  background-color: rgb(250, 108, 108);
+  color: white;
+}
+.main .main-btn:hover {
+  background-color: rgb(250, 108, 108);
+  color: black;
+}
+
+.content .font-18px {
+  font-size: 18px;
+}
+.content .font-16px {
+  font-size: 16px;
+}
+.content .font-14px {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .finish-btn {
+    width: 100%;
+  }
+}
+@media (min-width: 769px) {
+  .finish-btn {
+    width: 50%;
+  }
+}/*# sourceMappingURL=style.css.map */

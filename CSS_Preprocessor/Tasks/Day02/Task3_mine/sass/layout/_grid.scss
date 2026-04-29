@@ -1,0 +1,65 @@
+@use "../abstracts/variables" as *;
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 12px;
+}
+
+@each $key, $value in $breakpoints {
+    @media (min-width : $value) {
+        @for $i from 1 through $grid-cols-number {
+            .col-#{$key}-#{$i}{
+                width: ($i/$grid-cols-number)*100%  - 2% !important; 
+            }
+        }
+    }
+}
+
+@for $i from 1 through $grid-cols-number {
+    .col-#{$i}{
+        width: ($i/$grid-cols-number)*100%  - 2%;
+    }
+}
+
+@for $i from 1 through $padding-limit {
+    .p-#{$i}{
+        padding : $i * 4px;
+    }
+    .p-y-#{$i}{
+        padding-block : $i * 4px;
+    }
+    .p-x-#{$i}{
+        padding-inline : $i * 4px;
+    }
+    .p-b-#{$i}{
+        padding-bottom: $i * 4px;
+    }
+    .p-t-#{$i}{
+        padding-top: $i * 4px;
+    }
+}
+
+
+@media only screen and (min-width: 600px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 992px) {
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+}

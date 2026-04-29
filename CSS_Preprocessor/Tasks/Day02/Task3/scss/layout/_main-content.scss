@@ -1,0 +1,52 @@
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  gap: 40px;
+}
+
+.header-section {
+  max-width: 600px;
+  
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  
+  .section-title {
+    font-size: 24px;
+    font-style: italic;
+    color: #4a4a4a;
+    font-family: serif;
+  }
+  
+  .divider-line {
+    flex: 1;
+    height: 2px;
+    background-color: $element-color;
+  }
+}
+
+.features-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.feature-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}

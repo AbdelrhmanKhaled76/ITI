@@ -1,0 +1,38 @@
+.main {
+    .main-title {
+        color: red;
+    }
+
+    .main-subtitle {
+        color: rgb(250, 108, 108);
+    }
+
+    .main-btn {
+        background-color: rgb(250, 108, 108);
+        color: white;
+
+        &:hover {
+            background-color: rgb(250, 108, 108);
+            color: black;
+        }
+
+    }
+}
+
+.content {
+    @each $size in 18px, 16px, 14px {
+        .font-#{$size} {
+            font-size: $size;
+        }
+    }
+}
+
+.finish-btn {
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+
+    @media (min-width: 769px) {
+        width: 50%;
+    }
+}

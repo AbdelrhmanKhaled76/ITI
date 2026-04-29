@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+$focus-color: #3b82f6;
+$input-bg: #f8fafc;
+$input-border: #e2e8f0;
+body {
+    background-color: $input-bg;
+    color: #334155;
+    padding: 20px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.03);
+    width: 100%;
+    max-width: 1000px;
+
+    h1 {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1rem;
+        color: #64748b;
+        margin-bottom: 2.5rem;
+        text-align: center;
+    }
+
+    .responsive-form {
+        display: grid;
+        gap: 1.5rem;
+
+        grid-template-columns: 1fr;
+
+        @media (min-width: 600px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: 1024px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        label {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            span {
+                font-size: 0.875rem;
+                font-weight: 600;
+                color: #475569;
+            }
+
+            input {
+                padding: 0.75rem 1rem;
+                border: 1.5px solid $input-border;
+                border-radius: 8px;
+                font-size: 1rem;
+                color: #1e293b;
+                transition: all 0.2s ease-in-out;
+                background-color: $input-bg;
+
+                &::placeholder {
+                    color: #94a3b8;
+                }
+
+                &:focus {
+                    outline: none;
+                    border-color: $focus-color;
+                    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+                    background-color: $input-bg;
+                }
+            }
+        }
+
+        .full-width {
+            width: 100%;
+            grid-column: 1 / -1;
+
+        }
+
+        button {
+            padding: 0.875rem 2rem;
+            background-color: #3b82f6;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            width: 100%;
+            max-width: 300px;
+            box-shadow: 0 4px 6px rgba(59, 130, 246, 0.25);
+
+            &:hover {
+                background-color: #2563eb;
+                transform: translateY(-1px);
+                box-shadow: 0 6px 8px rgba(59, 130, 246, 0.3);
+            }
+
+            &:active {
+                transform: translateY(1px);
+                box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+            }
+        }
+    }
+}

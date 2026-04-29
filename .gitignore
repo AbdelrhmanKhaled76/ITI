@@ -9,3 +9,8 @@
 *.odp
 *.bak
 *.vscode
+*.sql
+*.jpg
+*.png
+*.mp4
+node_modules

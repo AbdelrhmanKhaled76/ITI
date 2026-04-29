@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            border: 2px solid green;
+        }
+      section {
+        background-color: aqua;
+        display: grid;
+        /* min-height: 500px; */
+        /* grid-auto-rows: minmax(200px,auto); */
+        grid-template-areas: "nav nav nav"
+        "aside art art"
+        "aside art art"
+        "foot foot foot";
+      }
+      nav {
+        background-color: cadetblue;
+        grid-area: nav;
+      }
+      aside {
+        background-color: blue;
+        grid-area: aside;
+      }
+      article {
+        background-color: chocolate;
+        grid-area: art;
+      }
+      footer {
+        background-color: crimson;
+        grid-area: foot;
+      }
+       /* 0px  */
+      /* @media (max-width:500px){
+           body{
+            background-color: aqua;
+           }
+      }
+      @media (max-width:900px){
+        body{
+            background-color: chocolate;
+        }
+      } */
+
+       @media (min-width:500px){
+        body{
+            background-color: cadetblue;
+        }
+       }
+       @media (min-width:900px){
+        body{
+            background-color: chocolate;
+        }
+       }
+
+       @media (min-width:1000px) and (max-width:1400px){
+
+       }
+       @media (1400px>=width>=1000px){
+
+       }
+    </style>
+  </head>
+  <body>
+    <section>
+      <nav>nav</nav>
+      <aside>aside</aside>
+      <article>article</article>
+      <footer>footer</footer>
+    </section>
+  </body>
+</html>

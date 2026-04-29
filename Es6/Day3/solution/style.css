@@ -1,0 +1,112 @@
+:root {
+    --bg: #f5f7ff;
+    --surface: #ffffff;
+    --text: #1f2a44;
+    --muted: #5f6d8e;
+    --accent: #4f7cff;
+    --border: #e2e8f0;
+    --shadow: 0 20px 45px rgba(40, 70, 150, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: linear-gradient(180deg, #eff3ff 0%, #f8fbff 100%);
+    color: var(--text);
+}
+
+.app {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 24px 48px;
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: clamp(2rem, 3vw, 3rem);
+    letter-spacing: -0.04em;
+}
+
+.app-header p {
+    margin: 12px auto 0;
+    max-width: 680px;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.user-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.user-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.user-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 28px 60px rgba(40, 70, 150, 0.1);
+}
+
+.user-card h2 {
+    margin: 0 0 10px;
+    font-size: 1.35rem;
+}
+
+.user-role {
+    margin: 0 0 18px;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.user-card p,
+.user-card address {
+    margin: 0 0 12px;
+    color: var(--muted);
+    line-height: 1.75;
+    font-size: 0.98rem;
+}
+
+.user-card a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.user-card a:hover {
+    text-decoration: underline;
+}
+
+.error-box {
+    padding: 24px;
+    background: #ffe4e8;
+    border: 1px solid #f2c0cb;
+    color: #8d2739;
+    border-radius: 18px;
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    .app {
+        padding: 20px 16px 32px;
+    }
+
+    .user-card {
+        padding: 20px;
+    }
+}

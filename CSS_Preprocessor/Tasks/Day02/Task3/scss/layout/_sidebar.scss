@@ -1,0 +1,94 @@
+.sidebar {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  gap: 20px;
+
+  @include tablet {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 10px 0;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .nav-brand {
+    @include tablet {
+      margin-right: 30px;
+    }
+    @include mobile {
+      margin-right: 0;
+    }
+  }
+
+  .circle-large {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @include tablet {
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+
+  .circle-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: $element-color;
+    text-decoration: none;
+    transition: opacity 0.2s;
+    
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .nav-footer {
+    margin-top: auto;
+    
+    @include tablet {
+      margin-top: 0;
+      margin-left: auto;
+    }
+    
+    @include mobile {
+      display: none;
+    }
+    
+    .action-btn {
+      width: 40px;
+      height: 40px;
+      background-color: $element-color;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-decoration: none;
+      transition: opacity 0.2s;
+      
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
