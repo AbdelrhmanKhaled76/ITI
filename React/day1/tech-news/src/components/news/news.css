@@ -1,0 +1,32 @@
+.news-container {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: var(--sans);
+}
+
+.news-form-side {
+  flex: 1;
+  max-width: 350px;
+}
+
+
+
+.news-cards-side {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .news-container {
+    flex-direction: column;
+  }
+
+  .news-cards-side {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}

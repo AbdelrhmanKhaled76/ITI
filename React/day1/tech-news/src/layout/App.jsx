@@ -1,19 +1,20 @@
 import { Component } from 'react'
 import './App.css'
-import Card from '../components/card/card'
 import Footer from '../components/footer/footer';
 import Header from '../components/header/header';
+import News from '../components/news/News';
 
 class App extends Component {
-
-
   render() {
-
     return (
       <>
+      <div className="main-layout">
         <Header />
-        <Card />
+        <main className="content-area">
+          <News />
+        </main>
         <Footer />
+      </div>
       </>
     )
   }

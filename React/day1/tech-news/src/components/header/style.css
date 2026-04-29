@@ -1,8 +1,8 @@
 .main-header {
   width: 100%;
-  padding: 1.5rem 2rem;
-  background: white;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
@@ -14,33 +14,35 @@
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 800;
-  color: var(--teritary-color);
+  color: var(--text-dark);
 }
 
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.85rem;
   transition: color 0.2s;
 }
 
 .nav-links a:hover {
-  color: var(--teritary-color);
+  color: var(--text-dark);
 }
 
 .profile-icon {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  background: var(--main-color);
-  border: 2px solid white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: var(--accent-lime);
+  color: var(--text-dark);
+  border: none;
+  box-shadow: 0 2px 8px rgba(196, 240, 116, 0.4);
 }
