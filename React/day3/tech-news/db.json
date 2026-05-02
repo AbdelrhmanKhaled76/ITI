@@ -1,0 +1,66 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title": "DeepSeek Releases V4-Pro with 1.6 Trillion Parameters",
+      "summary": "DeepSeek's latest open-weight model sets new benchmarks in math and coding efficiency.",
+      "category": "AI",
+      "date": "2026-04-24"
+    },
+    {
+      "id": 2,
+      "title": "Anthropic Eyes $900 Billion Valuation in New Funding Round",
+      "summary": "The AI startup is in talks for funding that would make it one of the most valuable private companies.",
+      "category": "Business",
+      "date": "2026-04-25"
+    },
+    {
+      "id": 3,
+      "title": "BMW i Ventures Launches $300M Fund for Physical AI",
+      "summary": "The new fund targets robotics, autonomous systems, and industrial software for manufacturing.",
+      "category": "Tech",
+      "date": "2026-04-26"
+    },
+    {
+      "id": 4,
+      "title": "Vercel Discloses Security Incident Linked to AI Provider",
+      "summary": "Cloud platform Vercel confirms core projects remain safe after third-party tool breach.",
+      "category": "Cybersecurity",
+      "date": "2026-04-22"
+    },
+    {
+      "id": 5,
+      "title": "MSG Used Facial Recognition to Track Owner's Enemies",
+      "summary": "Wired investigation reveals Madison Square Garden used security tech to monitor specific lawyers.",
+      "category": "Privacy",
+      "date": "2026-04-20"
+    },
+    {
+      "id": 6,
+      "title": "Whistleblower Challenges Verge Motorcycles' Battery Claims",
+      "summary": "Significant questions raised regarding the performance of solid-state battery technology.",
+      "category": "EV",
+      "date": "2026-04-28"
+    }
+  ],
+  "carousel": [
+    {
+      "id": 1,
+      "title": "The Future of Quantum Computing",
+      "description": "Exploring the next frontier of processing power and cryptographic security.",
+      "image": "/assets/carousel/carousel-1.png"
+    },
+    {
+      "id": 2,
+      "title": "Next-Gen Data Infrastructure",
+      "description": "How sustainable architecture is redefining global data storage.",
+      "image": "/assets/carousel/carousel-2.png"
+    },
+    {
+      "id": 3,
+      "title": "AI & The Neural Network Revolution",
+      "description": "Breaking down the advancements in machine learning and synthetic intelligence.",
+      "image": "/assets/carousel/carousel-3.png"
+    }
+  ]
+}

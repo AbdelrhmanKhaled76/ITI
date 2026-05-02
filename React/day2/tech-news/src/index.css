@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --bg-main: #F4F5F1;
+  --bg-dark: #1C1C1C;
+  --accent-lime: #C4F074;
+  --accent-lime-dark: #AEE251;
+  --glass-bg: rgba(255, 255, 255, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+  --text-dark: #121212;
+  --text-light: #FFFFFF;
+  --text-muted: #7A7A7A;
+  --sans: 'Urbanist', system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--sans);
+  background-color: var(--bg-main);
+  background-image: radial-gradient(circle at 15% 50%, rgba(196, 240, 116, 0.25), transparent 30%),
+                    radial-gradient(circle at 85% 30%, rgba(196, 240, 116, 0.2), transparent 30%);
+  color: var(--text-dark);
+  min-height: 100vh;
+}
